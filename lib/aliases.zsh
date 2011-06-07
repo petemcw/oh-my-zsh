@@ -21,7 +21,7 @@ alias l='ls -alhF'
 # Search
 alias grep="grep -i $GREP_OPTIONS"
 
-# Misc. System Aliases
+# System Aliases
 alias ch='history |grep'
 alias diff='diff -ubB'
 alias untar='tar -zxvf'
@@ -30,8 +30,9 @@ alias systail='tail -f /var/log/system.log'
 alias cp_folder='cp -Rpv'
 alias psapache='ps -ylC httpd --sort:rss'
 alias mysqldump='mysqldump --opt -Q --order-by-primary'
-alias screen='TERM=screen screen'
+alias screen='TERM=screen screen -U'
 alias g='grep -in'
+alias ssh='ssh -4g -o ServerAliveInterval=60'
 
 # Human-readable filesizes
 alias du='du -h'
@@ -41,13 +42,13 @@ alias free='free -m'
 
 # Development tools
 alias opendig="dig @208.67.222.222"
-alias magecleaner="rm -rf downloader/pearlib/cache/* downloader/pearlib/download/*"
 alias phpcs='phpcs --standard=zend'
 alias sniff='find . -type f -iname "*.php" -print0 |xargs phpcs --standard=zend'
 alias svnaddall='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add' 
 alias svndeletesvnfolders='find . -name ".svn" -exec rm -rf {} \;'
 alias svnexcludeeclipse='svn propset svn:ignore ".buildpath .project .projectOptions .settings .cache" .'
 alias svndiff='svn diff --diff-cmd fmdiff'
+alias mfavicon='convert -colors 256 -resize 16x16 '
 
 # Commands starting with % for pasting from web
 alias %=' '
