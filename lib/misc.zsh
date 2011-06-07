@@ -11,3 +11,9 @@ setopt long_list_jobs
 ## pager
 export PAGER=less
 export LC_CTYPE=en_US.UTF-8
+
+## editor
+EDITOR=vim
+export EDITOR
+export GIT_EDITOR='$EDITOR'
+export SVN_EDITOR='$EDITOR'
