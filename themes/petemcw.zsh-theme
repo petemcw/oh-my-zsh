@@ -32,7 +32,7 @@ user_name() {
 }
 
 charge_remaining() {
-    echo `~/.bin/battery Discharging` 2>/dev/null
+    echo `~/.bin/battery Discharging 2>/dev/null`
 }
 
 # Capture machine's hostname
