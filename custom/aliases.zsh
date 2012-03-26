@@ -1,9 +1,3 @@
-# directory listing
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -lh"
-alias la="ls -A"
-
 # search
 alias f='find'
 alias grep="grep -i $GREP_OPTIONS"
