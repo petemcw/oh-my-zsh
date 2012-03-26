@@ -3,6 +3,7 @@ alias f='find'
 alias grep="grep -i $GREP_OPTIONS"
 
 # misc. system aliases
+alias _='sudo'
 alias reload!='. ~/.zshrc'
 alias v='/usr/local/bin/mvim'
 alias x=extract

@@ -15,3 +15,10 @@ alias finder:restart='sudo killall Finder && sudo pen /System/Library/CoreServic
 
 # Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# Desktop Programs
+alias preview="open -a '$PREVIEW'"
+alias safari="open -a safari"
+alias firefox="open -a firefox"
+alias chrome="open -a google\ chrome"
+alias finder='open -a Finder '
