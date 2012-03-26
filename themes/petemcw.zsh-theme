@@ -18,12 +18,7 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[white]%}•"
 
 # Change prompt character based on UID
 prompt_caret() {
-    if [ $UID -eq 0 ]
-    then
-        echo "%{$fg_bold[magenta]%}»"
-    else
-        echo "%{$fg[white]%}›"
-    fi
+    if [ $UID -eq 0 ]; then echo "%{$fg[red]%}»"; else echo "%{$fg[white]%}›"; fi
 }
 
 # Current user
@@ -37,13 +32,7 @@ charge_remaining() {
 
 # Capture machine's hostname
 box_name() {
-    if [ -f ~/.box-name ]
-    then
-        HOST="$(cat ~/.box-name)"
-    else
-        HOST="$(hostname -s)"
-    fi
-
+    if [ -f ~/.box-name ]; then HOST="$(cat ~/.box-name)"; else HOST="$(hostname -s)"; fi
     echo "%{$fg[yellow]%}$HOST%{$reset_color%}"
 }
 
