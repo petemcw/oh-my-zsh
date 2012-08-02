@@ -16,6 +16,10 @@ ZSH_THEME_GIT_PROMPT_RENAMED=""
 ZSH_THEME_GIT_PROMPT_UNMERGED=""
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[white]%}•"
 
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[white]%}↑"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg_bold[white]%}↓"
+ZSH_THEME_GIT_PROMPT_DIVERGED="%{$fg_bold[white]%}↕"
+
 # Change prompt character based on UID
 prompt_caret() {
     if [ $UID -eq 0 ]; then echo "%{$fg[red]%}»"; else echo "%{$fg[white]%}›"; fi
