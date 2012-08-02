@@ -2,7 +2,7 @@ PROMPT='
 $(user_name) at $(box_name) in $(directory_name) $(git_prompt_info)$(git_prompt_status)$(check_push)
 $(prompt_caret)%{$reset_color%} '
 
-RPROMPT='$(charge_remaining)'
+RPROMPT=''
 
 ZSH_THEME_GIT_PROMPT_PREFIX="on "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -41,7 +41,7 @@ directory_name() {
     echo "%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}"
 }
 
-# Print RVM version
+# Print Ruby version
 rvm_prompt() {
     if $(which rvm &> /dev/null)
     then
