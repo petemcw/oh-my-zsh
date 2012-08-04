@@ -61,6 +61,12 @@ if [[ $+commands[rbenv] -eq 1 ]] ; then
       echo "%{$fg_bold[yellow]%}$(current_ruby)%{$reset_color%}"
     fi
   }
+  function current_ruby() {
+    echo "$(rbenv version-name)"
+  }
+  function current_gemset() {
+    echo "$(rbenv gemset active 2&>/dev/null | sed -e ":a" -e '$ s/\n/+/gp;N;b a' | head -n1)"
+  }
 else
   # Fallback to system
   function ruby_prompt_info() { echo "%{$fg_bold[yellow]%}$(ruby -v | cut -f-2 -d ' ')%{$reset_color%}" }
